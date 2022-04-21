@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Car price prediction</title>
+	<meta name="viweport" content="width=device-width,initial-scale=1">
+</head>
+<style type="text/css">
+	center{
+		background-color: mediumaquamarine;
+	}
+	button{
+		background-color: blue;
+		color: white;
+	}
+	h2{
+		background-color: blue;
+		color: white;
+	}
+	p{
+		color: black;
+	}
+</style>
+
+<body>
+	<center>
+		<h2>CAR PRICE PREDICTION</h2>
+		CAR NAME:</br>
+		<input type="text" id="name" placeholder="Enter the car name"style="width:200px"></br></br>
+		MODEL NAME:</br>
+		<input type="text" id="model" placeholder="Enter the model name"style="width:200px"></br></br>
+		FUEL TYPE:</br>
+		<input type="text" id="types" placeholder="Enter the fuel type" style="width:200px"></br></br>
+		MILEAGE:</br>
+		<input type="text" id="mileage" placeholder="Enter the mileage"style="width:200px"></br></br>
+		<button type="button"onClick="predict()">Calculate Price</button></br>
+		<p>CAR PRICE WILL BE<span id="res"></span></p></br>
+
+	</center>
+<script>
+		function predict(){
+			var names=document.getElementById("name").value;
+			var models=document.getElementById("model").value;
+			var fuel_types=document.getElementById("types").value;
+			if(names=="Maruthi")
+			{
+				document.getElementById("res").innerHTML="6 lakhs";
+			}
+			else if(names=="Mahindra")
+			{
+				document.getElementById("res").innerHTML="7 lakhs"
+			}
+			else if(names=="Hyundai")
+			{
+				document.getElementById("res").innerHTML="7.5 lakhs"
+			}
+			else if(names=="BMW")
+			{
+				document.getElementById("res").innerHTML="70 lakhs"
+			}
+		}
+</script>
+</body>
+</html>
